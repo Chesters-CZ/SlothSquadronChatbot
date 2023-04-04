@@ -10,7 +10,7 @@ public class Weapon
     public int Damage;
     public int Bullets;
     public double ArmorPenetration;
-    public int DamageFalloffPer500U;
+    public int DamageFalloffAt500U;
     public double HeadshotMultiplier;
     public double RPM;
     public int PenetrationPower;
@@ -24,9 +24,11 @@ public class Weapon
     public double AccurateRangeStand;
     public double AccurateRangeCrouch;
     public double StandingInaccuracy;
+    public double CrouchingInaccuracy;
     public double RunningInaccuracy;
     public double LadderInaccuracy;
     public double InaccuracyAtJumpApex;
+    public double InaccuracyAfterLanding;
     public double InaccuracyFromFiring;
     public double RecoveryTimeCrouch;
     public double RecoveryTimeStand;
@@ -42,25 +44,25 @@ public class Weapon
     public OptionalBoolean BurstFire;
     public OptionalBoolean RapidFire;
     public Team PurchasableBy;
-
+    public String[] Aliases;
     public Weapon(string rawValues)
     {
+        Console.WriteLine(rawValues);
         string[] parsedVals = rawValues.Split(",");
-
         Name = parsedVals[0];
         Price = Int32.Parse(parsedVals[1].Replace("$", ""));
         KillAward = Int32.Parse(parsedVals[2].Replace("$", ""));
         Damage = Int32.Parse(parsedVals[3]);
         Bullets = Int32.Parse(parsedVals[4]);
         ArmorPenetration = Double.Parse(parsedVals[5].Replace("%", ""));
-        DamageFalloffPer500U = Int32.Parse(parsedVals[6].Replace("%", ""));
+        DamageFalloffAt500U = Int32.Parse(parsedVals[6].Replace("%", ""));
         HeadshotMultiplier = Double.Parse(parsedVals[7].Replace("x", ""));
         RPM = Double.Parse(parsedVals[8]);
         PenetrationPower = Int32.Parse(parsedVals[9].Replace("%", ""));
         MagazineSize = Int32.Parse(parsedVals[10]);
         AmmoInReserve = Int32.Parse(parsedVals[11]);
         Runspeed = Int32.Parse(parsedVals[12]);
-        TaggingPower = Int32.Parse(parsedVals[13]);
+        TaggingPower = Int32.Parse(parsedVals[13].Replace("%",""));
         BulletRange = Int32.Parse(parsedVals[14]);
         HoldToShoot = parsedVals[15].Equals("true");
         Tracers = parsedVals[16].Replace(" ", "").ToLower() switch
@@ -72,19 +74,21 @@ public class Weapon
         AccurateRangeStand = Double.Parse(parsedVals[17].Replace("m", ""));
         AccurateRangeCrouch = Double.Parse(parsedVals[18].Replace("m", ""));
         StandingInaccuracy = Double.Parse(parsedVals[19]);
-        RunningInaccuracy = Double.Parse(parsedVals[20]);
-        LadderInaccuracy = Double.Parse(parsedVals[21]);
-        InaccuracyAtJumpApex = Double.Parse(parsedVals[22]);
-        InaccuracyFromFiring = Double.Parse(parsedVals[23]);
-        RecoveryTimeCrouch = Double.Parse(parsedVals[24]);
-        RecoveryTimeStand = Double.Parse(parsedVals[25]);
-        RecoilAmount = double.Parse(parsedVals[26]);
-        RecoilAngleVariance = Int32.Parse(parsedVals[27]);
-        RecoilAmountVariance = Int32.Parse(parsedVals[28]);
-        IsRecoilPatternRandom = parsedVals[29].ToLower().Equals("random");
-        FatalHeadshotRange = Double.Parse(parsedVals[30]);
-        FatalHeadshotRangeHelmet = Double.Parse(parsedVals[31]);
-        WeaponType = parsedVals[32].ToLower() switch
+        CrouchingInaccuracy = Double.Parse(parsedVals[20]);
+        RunningInaccuracy = Double.Parse(parsedVals[21]);
+        LadderInaccuracy = Double.Parse(parsedVals[22]);
+        InaccuracyAtJumpApex = Double.Parse(parsedVals[23]);
+        InaccuracyAfterLanding = Double.Parse(parsedVals[24]);
+        InaccuracyFromFiring = Double.Parse(parsedVals[25]);
+        RecoveryTimeCrouch = Double.Parse(parsedVals[26]);
+        RecoveryTimeStand = Double.Parse(parsedVals[27]);
+        RecoilAmount = Double.Parse(parsedVals[28]);
+        RecoilAngleVariance = Int32.Parse(parsedVals[29]);
+        RecoilAmountVariance = Int32.Parse(parsedVals[30]);
+        IsRecoilPatternRandom = parsedVals[31].ToLower().Equals("random");
+        FatalHeadshotRange = Double.Parse(parsedVals[32]);
+        FatalHeadshotRangeHelmet = Double.Parse(parsedVals[33]);
+        WeaponType = parsedVals[34].ToLower() switch
         {
             "pistol" => WeaponClass.Pistol,
             "shotgun" => WeaponClass.Shotgun,
@@ -93,35 +97,40 @@ public class Weapon
             "rifle" => WeaponClass.Rifle,
             "sniper" => WeaponClass.Sniper
         };
-        Scoped = parsedVals[33].ToLower() switch
+        Scoped = parsedVals[35].ToLower() switch
         {
             "cannot" => OptionalBoolean.Cannot,
             "true" => OptionalBoolean.Yes,
             "false" => OptionalBoolean.No
         };
-        SilencerOn = parsedVals[34].ToLower()  switch
+        SilencerOn = parsedVals[36].ToLower()  switch
         {
             "cannot" => OptionalBoolean.Cannot,
             "true" => OptionalBoolean.Yes,
             "false" => OptionalBoolean.No
         };
-        BurstFire = parsedVals[35].ToLower()  switch
+        BurstFire = parsedVals[37].ToLower()  switch
         {
             "cannot" => OptionalBoolean.Cannot,
             "true" => OptionalBoolean.Yes,
             "false" => OptionalBoolean.No
         };;
-        RapidFire = parsedVals[36].ToLower()  switch
+        RapidFire = parsedVals[38].ToLower()  switch
         {
             "cannot" => OptionalBoolean.Cannot,
             "true" => OptionalBoolean.Yes,
             "false" => OptionalBoolean.No
         };;
-        PurchasableBy = parsedVals[37].ToLower() switch
+        PurchasableBy = parsedVals[39].ToLower() switch
         {
             "cts" => Team.CTs,
-            "ts"=> Team.Ts,
+            "ts" => Team.Ts,
             "both" => Team.Both
         };
+    }
+
+    public Weapon()
+    {
+        
     }
 }
