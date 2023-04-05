@@ -45,7 +45,7 @@ public class Weapon
     public OptionalBoolean RapidFire;
     public Team PurchasableBy;
     public String[] Aliases;
-    public Weapon(string rawValues)
+    private Weapon(string rawValues)
     {
         Console.WriteLine(rawValues);
         string[] parsedVals = rawValues.Split(",");
