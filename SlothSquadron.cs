@@ -11,7 +11,8 @@ public class SlothSquadron
         { WriteIndented = true, IncludeFields = true, MaxDepth = int.MaxValue };
 
     private List<Weapon> _knownWeapons =
-        JsonSerializer.Deserialize<List<Weapon>>(File.ReadAllText("../../../Databaze.json"), _serializerOptions) ?? throw new FileLoadException();
+        JsonSerializer.Deserialize<List<Weapon>>(File.ReadAllText("../../../Databaze.json"), _serializerOptions) ??
+        throw new FileLoadException();
 
 
     public string Ask(string? query)
@@ -32,7 +33,7 @@ public class SlothSquadron
 
             return output;
         }
-        
+
         if (query.Contains("stats") || query.Contains("attributes") || query.Contains("properties"))
         {
             output = "Here are the properties i know about and what you can call them:\n" +

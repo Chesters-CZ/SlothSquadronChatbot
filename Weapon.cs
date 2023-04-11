@@ -2,48 +2,50 @@
 
 public class Weapon
 {
-    public readonly string Name = null!;
-    public readonly int Price;
-    public readonly int KillAward;
-    public readonly int Damage;
-    public readonly int Bullets;
-    public readonly double ArmorPenetration;
-    public readonly int DamageFalloffAt500U;
-    public readonly double HeadshotMultiplier;
+    public string Name = null!;
+    public int Price;
+    public int KillAward;
+    public int Damage;
+    public int Bullets;
+    public double ArmorPenetration;
+    public int DamageFalloffAt500U;
+    public double HeadshotMultiplier;
+
     // ReSharper disable once InconsistentNaming
-    public readonly double RPM;
-    public readonly int PenetrationPower;
-    public readonly int MagazineSize;
-    public readonly int AmmoInReserve;
-    public readonly int Runspeed;
-    public readonly int TaggingPower;
-    public readonly int BulletRange;
-    public readonly bool HoldToShoot;
-    public readonly TracerFrequency Tracers;
-    public readonly double AccurateRangeStand;
-    public readonly double AccurateRangeCrouch;
-    public readonly double StandingInaccuracy;
-    public readonly double CrouchingInaccuracy;
-    public readonly double RunningInaccuracy;
-    public readonly double LadderInaccuracy;
-    public readonly double InaccuracyAtJumpApex;
-    public readonly double InaccuracyAfterLanding;
-    public readonly double InaccuracyFromFiring;
-    public readonly double RecoveryTimeCrouch;
-    public readonly double RecoveryTimeStand;
-    public readonly double RecoilAmount;
-    public readonly int RecoilAngleVariance;
-    public readonly int RecoilAmountVariance;
-    public readonly bool IsRecoilPatternRandom;
-    public readonly double FatalHeadshotRange;
-    public readonly double FatalHeadshotRangeHelmet;
-    public readonly WeaponClass WeaponType;
-    public readonly OptionalBoolean Scoped;
-    public readonly OptionalBoolean SilencerOn;
-    public readonly OptionalBoolean BurstFire;
-    public readonly OptionalBoolean RapidFire;
-    public readonly Team PurchasableBy;
-    public readonly string[] Aliases = null!;
+    public double RPM;
+    public int PenetrationPower;
+    public int MagazineSize;
+    public int AmmoInReserve;
+    public int Runspeed;
+    public int TaggingPower;
+    public int BulletRange;
+    public bool HoldToShoot;
+    public TracerFrequency Tracers;
+    public double AccurateRangeStand;
+    public double AccurateRangeCrouch;
+    public double StandingInaccuracy;
+    public double CrouchingInaccuracy;
+    public double RunningInaccuracy;
+    public double LadderInaccuracy;
+    public double InaccuracyAtJumpApex;
+    public double InaccuracyAfterLanding;
+    public double InaccuracyFromFiring;
+    public double RecoveryTimeCrouch;
+    public double RecoveryTimeStand;
+    public double RecoilAmount;
+    public int RecoilAngleVariance;
+    public int RecoilAmountVariance;
+    public bool IsRecoilPatternRandom;
+    public double FatalHeadshotRange;
+    public double FatalHeadshotRangeHelmet;
+    public WeaponClass WeaponType;
+    public OptionalBoolean Scoped;
+    public OptionalBoolean SilencerOn;
+    public OptionalBoolean BurstFire;
+    public OptionalBoolean RapidFire;
+    public Team PurchasableBy;
+    public string[] Aliases = null!;
+
     private Weapon(string rawValues)
     {
         Console.WriteLine(rawValues);
@@ -61,7 +63,7 @@ public class Weapon
         MagazineSize = int.Parse(parsedVals[10]);
         AmmoInReserve = int.Parse(parsedVals[11]);
         Runspeed = int.Parse(parsedVals[12]);
-        TaggingPower = int.Parse(parsedVals[13].Replace("%",""));
+        TaggingPower = int.Parse(parsedVals[13].Replace("%", ""));
         BulletRange = int.Parse(parsedVals[14]);
         HoldToShoot = parsedVals[15].Equals("true");
         Tracers = parsedVals[16].Replace(" ", "").ToLower() switch
@@ -102,19 +104,19 @@ public class Weapon
             "true" => OptionalBoolean.Yes,
             "false" => OptionalBoolean.No
         };
-        SilencerOn = parsedVals[36].ToLower()  switch
+        SilencerOn = parsedVals[36].ToLower() switch
         {
             "cannot" => OptionalBoolean.Cannot,
             "true" => OptionalBoolean.Yes,
             "false" => OptionalBoolean.No
         };
-        BurstFire = parsedVals[37].ToLower()  switch
+        BurstFire = parsedVals[37].ToLower() switch
         {
             "cannot" => OptionalBoolean.Cannot,
             "true" => OptionalBoolean.Yes,
             "false" => OptionalBoolean.No
         };
-        RapidFire = parsedVals[38].ToLower()  switch
+        RapidFire = parsedVals[38].ToLower() switch
         {
             "cannot" => OptionalBoolean.Cannot,
             "true" => OptionalBoolean.Yes,
@@ -130,6 +132,5 @@ public class Weapon
 
     public Weapon()
     {
-        
     }
 }
