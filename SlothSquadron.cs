@@ -21,7 +21,7 @@ public class SlothSquadron
         query = query.ToLower();
         string output = "";
 
-        if (query.Contains("weapon") || query.Contains("alias"))
+        if (query.Contains("weapons") || query.Contains("alias"))
         {
             output = "Here is a list of all the weapons I know about along with their aliases/nicknames:\n";
             foreach (Weapon weapon in _knownWeapons)
