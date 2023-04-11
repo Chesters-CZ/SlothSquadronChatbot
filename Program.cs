@@ -1,5 +1,4 @@
-﻿using System.Text.Json;
-using GenerickýProgramNetestovaný;
+﻿using GenerickýProgramNetestovaný;
 
 SlothSquadron slothSquadron = new SlothSquadron();
 

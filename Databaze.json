@@ -106,8 +106,8 @@
     "MagazineSize": 8,
     "AmmoInReserve": 8,
     "Runspeed": 220,
-    "TaggingPower": 160,
-    "BulletRange": 4097,
+    "TaggingPower": 60,
+    "BulletRange": 4096,
     "HoldToShoot": false,
     "Tracers": 1,
     "AccurateRangeStand": 1.91,
@@ -133,11 +133,7 @@
     "BurstFire": 2,
     "RapidFire": 0,
     "PurchasableBy": 0,
-    "Aliases": [
-      "revolver",
-      "r8",
-      "r8revolver"
-    ]
+    "Aliases": []
   },
   {
     "Name": "Dual Berettas",
@@ -298,7 +294,7 @@
     "AmmoInReserve": 120,
     "Runspeed": 240,
     "TaggingPower": 50,
-    "BulletRange": 4097,
+    "BulletRange": 4096,
     "HoldToShoot": false,
     "Tracers": 1,
     "AccurateRangeStand": 7.4,
@@ -316,7 +312,7 @@
     "RecoilAngleVariance": 20,
     "RecoilAmountVariance": 5,
     "IsRecoilPatternRandom": true,
-    "FatalHeadshotRange": 561.92,
+    "FatalHeadshotRange": 560.92,
     "FatalHeadshotRangeHelmet": -1,
     "WeaponType": 0,
     "Scoped": 2,
@@ -324,13 +320,7 @@
     "BurstFire": 0,
     "RapidFire": 2,
     "PurchasableBy": 3,
-    "Aliases": [
-      "glock",
-      "g-18",
-      "g18",
-      "glock18",
-      "glock-18"
-    ]
+    "Aliases": []
   },
   {
     "Name": "P2000",
@@ -419,14 +409,10 @@
     "BurstFire": 2,
     "RapidFire": 2,
     "PurchasableBy": 2,
-    "Aliases": [
-      "usp",
-      "usp-s",
-      "usps"
-    ]
+    "Aliases": []
   },
   {
-    "Name": "USP-S (silencer)",
+    "Name": "USP-S",
     "Price": 200,
     "KillAward": 300,
     "Damage": 35,
@@ -440,7 +426,7 @@
     "AmmoInReserve": 24,
     "Runspeed": 240,
     "TaggingPower": 50,
-    "BulletRange": 4097,
+    "BulletRange": 4096,
     "HoldToShoot": false,
     "Tracers": 2,
     "AccurateRangeStand": 23.81,
@@ -458,7 +444,7 @@
     "RecoilAngleVariance": 0,
     "RecoilAmountVariance": 0,
     "IsRecoilPatternRandom": true,
-    "FatalHeadshotRange": 1784.85,
+    "FatalHeadshotRange": 1783.85,
     "FatalHeadshotRangeHelmet": -1,
     "WeaponType": 0,
     "Scoped": 2,
@@ -982,7 +968,7 @@
     "FatalHeadshotRangeHelmet": -1,
     "WeaponType": 2,
     "Scoped": 2,
-    "SilencerOn": 2,
+    "SilencerOn": 0,
     "BurstFire": 2,
     "RapidFire": 2,
     "PurchasableBy": 0,
@@ -1237,8 +1223,8 @@
     "MagazineSize": 30,
     "AmmoInReserve": 90,
     "Runspeed": 150,
-    "TaggingPower": 160,
-    "BulletRange": 8193,
+    "TaggingPower": 60,
+    "BulletRange": 8192,
     "HoldToShoot": false,
     "Tracers": 0,
     "AccurateRangeStand": 38.29,
@@ -1264,9 +1250,7 @@
     "BurstFire": 2,
     "RapidFire": 2,
     "PurchasableBy": 2,
-    "Aliases": [
-      "aug"
-    ]
+    "Aliases": []
   },
   {
     "Name": "FAMAS",
@@ -1329,7 +1313,7 @@
     "AmmoInReserve": 90,
     "Runspeed": 220,
     "TaggingPower": 60,
-    "BulletRange": 8193,
+    "BulletRange": 8192,
     "HoldToShoot": false,
     "Tracers": 0,
     "AccurateRangeStand": 35.52,
@@ -1347,7 +1331,7 @@
     "RecoilAngleVariance": 50,
     "RecoilAmountVariance": 1,
     "IsRecoilPatternRandom": true,
-    "FatalHeadshotRange": 2234.13,
+    "FatalHeadshotRange": 2233.13,
     "FatalHeadshotRangeHelmet": -1,
     "WeaponType": 4,
     "Scoped": 2,
@@ -1355,10 +1339,7 @@
     "BurstFire": 0,
     "RapidFire": 2,
     "PurchasableBy": 2,
-    "Aliases": [
-      "famas",
-      "burstfirerifle"
-    ]
+    "Aliases": []
   },
   {
     "Name": "Galil AR",
@@ -1494,15 +1475,10 @@
     "BurstFire": 2,
     "RapidFire": 2,
     "PurchasableBy": 2,
-    "Aliases": [
-      "m4a1",
-      "m4a1s",
-      "m4a1-s",
-      "m1"
-    ]
+    "Aliases": []
   },
   {
-    "Name": "M4A1-S (silencer)",
+    "Name": "M4A1-S",
     "Price": 2900,
     "KillAward": 300,
     "Damage": 38,
@@ -1516,7 +1492,7 @@
     "AmmoInReserve": 80,
     "Runspeed": 225,
     "TaggingPower": 60,
-    "BulletRange": 8193,
+    "BulletRange": 8192,
     "HoldToShoot": false,
     "Tracers": 2,
     "AccurateRangeStand": 28.22,
@@ -1534,7 +1510,7 @@
     "RecoilAngleVariance": 65,
     "RecoilAmountVariance": 0,
     "IsRecoilPatternRandom": false,
-    "FatalHeadshotRange": 2247.53,
+    "FatalHeadshotRange": 2246.53,
     "FatalHeadshotRangeHelmet": -1,
     "WeaponType": 4,
     "Scoped": 2,
@@ -1598,8 +1574,8 @@
   },
   {
     "Name": "SG 553 (scoped)",
-    "Price": 3001,
-    "KillAward": 301,
+    "Price": 3000,
+    "KillAward": 300,
     "Damage": 30,
     "Bullets": 1,
     "ArmorPenetration": 100,
@@ -1610,8 +1586,8 @@
     "MagazineSize": 30,
     "AmmoInReserve": 90,
     "Runspeed": 150,
-    "TaggingPower": 160,
-    "BulletRange": 8193,
+    "TaggingPower": 60,
+    "BulletRange": 8192,
     "HoldToShoot": false,
     "Tracers": 0,
     "AccurateRangeStand": 37.08,
@@ -1637,11 +1613,7 @@
     "BurstFire": 2,
     "RapidFire": 2,
     "PurchasableBy": 3,
-    "Aliases": [
-      "sg553",
-      "sg553",
-      "553"
-    ]
+    "Aliases": []
   },
   {
     "Name": "M249",
@@ -1794,8 +1766,8 @@
     "MagazineSize": 5,
     "AmmoInReserve": 30,
     "Runspeed": 100,
-    "TaggingPower": 165,
-    "BulletRange": 8193,
+    "TaggingPower": 65,
+    "BulletRange": 8192,
     "HoldToShoot": false,
     "Tracers": 2,
     "AccurateRangeStand": 69.27,
@@ -1821,9 +1793,7 @@
     "BurstFire": 2,
     "RapidFire": 2,
     "PurchasableBy": 0,
-    "Aliases": [
-      "awp"
-    ]
+    "Aliases": []
   },
   {
     "Name": "G3SG1",
@@ -1872,8 +1842,8 @@
   },
   {
     "Name": "G3SG1 (scoped)",
-    "Price": 5001,
-    "KillAward": 301,
+    "Price": 5000,
+    "KillAward": 300,
     "Damage": 80,
     "Bullets": 1,
     "ArmorPenetration": 82.5,
@@ -1884,8 +1854,8 @@
     "MagazineSize": 20,
     "AmmoInReserve": 90,
     "Runspeed": 120,
-    "TaggingPower": 150,
-    "BulletRange": 8193,
+    "TaggingPower": 50,
+    "BulletRange": 8192,
     "HoldToShoot": false,
     "Tracers": 2,
     "AccurateRangeStand": 66.26,
@@ -1911,9 +1881,7 @@
     "BurstFire": 2,
     "RapidFire": 2,
     "PurchasableBy": 3,
-    "Aliases": [
-      "g3sg1"
-    ]
+    "Aliases": []
   },
   {
     "Name": "SCAR-20",
@@ -1976,8 +1944,8 @@
     "MagazineSize": 20,
     "AmmoInReserve": 90,
     "Runspeed": 120,
-    "TaggingPower": 165,
-    "BulletRange": 8193,
+    "TaggingPower": 65,
+    "BulletRange": 8192,
     "HoldToShoot": false,
     "Tracers": 2,
     "AccurateRangeStand": 66.26,
@@ -2003,11 +1971,7 @@
     "BurstFire": 2,
     "RapidFire": 2,
     "PurchasableBy": 2,
-    "Aliases": [
-      "scar-20",
-      "scar20",
-      "scar"
-    ]
+    "Aliases": []
   },
   {
     "Name": "SSG 08",
@@ -2072,7 +2036,7 @@
     "AmmoInReserve": 90,
     "Runspeed": 230,
     "TaggingPower": 65,
-    "BulletRange": 8193,
+    "BulletRange": 8192,
     "HoldToShoot": false,
     "Tracers": 2,
     "AccurateRangeStand": 47.18,
@@ -2098,11 +2062,6 @@
     "BurstFire": 2,
     "RapidFire": 2,
     "PurchasableBy": 0,
-    "Aliases": [
-      "ssg-08",
-      "ssg08",
-      "ssg",
-      "scout"
-    ]
+    "Aliases": []
   }
 ]
