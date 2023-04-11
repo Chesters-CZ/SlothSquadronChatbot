@@ -573,7 +573,7 @@ public class SlothSquadron
                     }
                 }
             }
-            else if (weapon.ToLower().Contains("sg 553"))
+            else if (weapon.ToLower().Contains("sg553"))
             {
                 Console.WriteLine(
                     "You have mentioned the SG 553. Would you like to know about stats for firing when scoped or unscoped? (s/u)");
