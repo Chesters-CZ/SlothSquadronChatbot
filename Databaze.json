@@ -46,7 +46,7 @@
     ]
   },
   {
-    "Name": "R8 Revolver",
+    "Name": "Revolver",
     "Price": 600,
     "KillAward": 300,
     "Damage": 86,
@@ -655,7 +655,6 @@
     "PurchasableBy": 2,
     "Aliases": [
       "mag7",
-      "mag",
       "clipshotgun",
       "mag-7"
     ]
